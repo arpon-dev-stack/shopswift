@@ -24,40 +24,6 @@ export default function ShopSwiftProductDetails() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f8fafa] font-sans text-[#191c1d] selection:bg-[#fe9800]/30">
-      {/* Top Navigation */}
-      <header
-        className={`fixed top-0 z-50 flex h-14 w-full items-center justify-between bg-[#0e1a28] px-3 transition-shadow duration-200 dark:bg-[#232f3e] ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
-      >
-        <div className="flex items-center gap-4">
-          <button className="flex items-center justify-center rounded-full p-2 text-white transition-colors hover:bg-white/10">
-            <span className="mb-1 block h-0.5 w-6 bg-current"></span>
-            <span className="mb-1 block h-0.5 w-6 bg-current"></span>
-            <span className="block h-0.5 w-6 bg-current"></span>
-          </button>
-          <h1 className="text-xl font-bold tracking-tight text-white dark:text-[#8a97a9]">
-            ShopSwift
-          </h1>
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="rounded-full p-2 text-white transition-colors hover:bg-white/10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.604 10.604Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </header>
-
       <main className="mx-auto min-h-screen max-w-[1440px] pt-14 pb-20">
         {/* Main Product Layout */}
         <div className="grid grid-cols-1 gap-8 p-4 md:p-8 lg:grid-cols-12">
@@ -399,37 +365,6 @@ export default function ShopSwiftProductDetails() {
           </div>
         </section>
       </main>
-
-      {/* Mobile Footer Sticky Tab Bar */}
-      <nav className="pb-safe fixed bottom-0 z-50 flex h-16 w-full items-center justify-around border-t border-[#c5c6cc] bg-[#f8fafa] px-2 shadow-lg md:hidden dark:border-[#75777c] dark:bg-[#d8dada]">
-        <a
-          className="flex flex-col items-center justify-center rounded-full bg-[#fe9800] px-4 py-1 text-xs font-medium text-[#643900] dark:bg-[#8a5100] dark:text-white"
-          href="#"
-        >
-          <span>Home</span>
-        </a>
-        <a
-          className="flex flex-col items-center justify-center rounded-md p-2 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span>Profile</span>
-        </a>
-        <a
-          className="relative flex flex-col items-center justify-center rounded-md p-2 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span className="absolute top-1 right-2 rounded-full bg-[#fe9800] px-1 text-[8px] font-bold text-[#643900]">
-            3
-          </span>
-          <span>Cart</span>
-        </a>
-        <a
-          className="flex flex-col items-center justify-center rounded-md p-2 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span>Orders</span>
-        </a>
-      </nav>
     </div>
   );
 }

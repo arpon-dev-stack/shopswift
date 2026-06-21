@@ -86,23 +86,6 @@ export default function OrderHistory() {
 
   return (
     <div className="bg-surface text-on-surface min-h-screen font-sans antialiased">
-      {/* TopAppBar Component */}
-      <header className="bg-primary dark:bg-primary-container fixed top-0 z-50 flex h-14 w-full items-center justify-between px-4 shadow-sm">
-        <div className="flex items-center gap-4">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 flex items-center justify-center rounded-full p-2 transition-colors duration-200">
-            <span className="material-symbols-outlined">menu</span>
-          </button>
-          <h1 className="text-on-primary dark:text-on-primary-container text-[20px] leading-[28px] font-extrabold tracking-tight">
-            ShopSwift
-          </h1>
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 flex items-center justify-center rounded-full p-2 transition-colors duration-200">
-            <span className="material-symbols-outlined">search</span>
-          </button>
-        </div>
-      </header>
-
       {/* Main Content Area */}
       <main className="mx-auto max-w-4xl px-4 pt-14 pb-20">
         {/* Breadcrumbs / Page Header */}

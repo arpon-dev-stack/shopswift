@@ -6,23 +6,6 @@ import Image from 'next/image';
 export default function UserProfileDashboard() {
   return (
     <div className="bg-surface text-on-surface min-h-screen pb-20 font-sans antialiased">
-      {/* Top App Bar */}
-      <header className="bg-primary dark:bg-primary-container px-gutter fixed top-0 z-50 flex h-14 w-full items-center justify-between shadow-sm">
-        <div className="flex items-center gap-2">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 rounded p-2 transition-transform active:scale-95">
-            <span className="material-symbols-outlined block">menu</span>
-          </button>
-          <h1 className="text-on-primary dark:text-on-primary-container text-[20px] leading-[28px] font-bold tracking-tight">
-            ShopSwift
-          </h1>
-        </div>
-        <div className="flex items-center">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 rounded p-2 transition-transform active:scale-95">
-            <span className="material-symbols-outlined block">search</span>
-          </button>
-        </div>
-      </header>
-
       {/* Main Content Canvas */}
       <main className="mx-auto max-w-7xl px-4 pt-14">
         {/* Welcome Hero Section */}
@@ -250,33 +233,6 @@ export default function UserProfileDashboard() {
           </button>
         </div>
       </main>
-
-      {/* Bottom Navigation Bar */}
-      <nav className="bg-surface dark:bg-surface-dim border-outline-variant dark:border-outline pb-safe fixed bottom-0 z-50 flex h-16 w-full items-center justify-around border-t px-2 shadow-lg">
-        <div className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex scale-95 cursor-pointer flex-col items-center justify-center rounded-full px-4 py-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">home</span>
-          <span className="text-[12px] leading-[16px] font-medium">Home</span>
-        </div>
-        <div className="bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary flex scale-95 flex-col items-center justify-center rounded-full px-4 py-1 transition-transform active:scale-90">
-          <span
-            className="material-symbols-outlined"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            person
-          </span>
-          <span className="text-[12px] leading-[16px] font-medium">
-            Profile
-          </span>
-        </div>
-        <div className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex scale-95 cursor-pointer flex-col items-center justify-center rounded-full px-4 py-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">shopping_cart</span>
-          <span className="text-[12px] leading-[16px] font-medium">Cart</span>
-        </div>
-        <div className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex scale-95 cursor-pointer flex-col items-center justify-center rounded-full px-4 py-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">history</span>
-          <span className="text-[12px] leading-[16px] font-medium">Orders</span>
-        </div>
-      </nav>
     </div>
   );
 }

@@ -79,23 +79,6 @@ export default function SearchResults() {
 
   return (
     <div className="text-on-surface bg-surface min-h-screen font-sans antialiased">
-      {/* TopAppBar Shell */}
-      <header className="bg-primary dark:bg-primary-container px-gutter fixed top-0 z-50 flex h-14 w-full items-center justify-between shadow-sm">
-        <div className="flex items-center gap-4">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 transform rounded p-2 transition-colors duration-200 active:scale-95">
-            <span className="material-symbols-outlined">menu</span>
-          </button>
-          <h1 className="text-on-primary dark:text-on-primary-container text-[20px] leading-[28px] font-extrabold tracking-tight">
-            ShopSwift
-          </h1>
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="text-on-primary dark:text-on-primary-container hover:bg-primary-container/20 transform rounded p-2 transition-colors duration-200 active:scale-95">
-            <span className="material-symbols-outlined">search</span>
-          </button>
-        </div>
-      </header>
-
       <main className="mt-14 pb-20">
         {/* Filter & Sort Bar */}
         <div className="bg-surface border-outline-variant px-gutter hide-scrollbar sticky top-14 z-40 overflow-x-auto border-b py-2 whitespace-nowrap shadow-sm">
@@ -222,28 +205,6 @@ export default function SearchResults() {
           ))}
         </div>
       </main>
-
-      {/* BottomNavBar Shell */}
-      <nav className="bg-surface dark:bg-surface-dim border-outline-variant dark:border-outline pb-safe fixed bottom-0 z-50 flex h-16 w-full items-center justify-around border-t px-2 shadow-lg">
-        <button className="bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary flex transform flex-col items-center justify-center rounded-full px-4 py-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">home</span>
-          <span className="text-[12px] leading-[16px] font-medium">Home</span>
-        </button>
-        <button className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex transform flex-col items-center justify-center rounded p-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">person</span>
-          <span className="text-[12px] leading-[16px] font-medium">
-            Profile
-          </span>
-        </button>
-        <button className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex transform flex-col items-center justify-center rounded p-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">shopping_cart</span>
-          <span className="text-[12px] leading-[16px] font-medium">Cart</span>
-        </button>
-        <button className="text-on-surface-variant dark:text-on-surface hover:bg-surface-container-high dark:hover:bg-surface-variant flex transform flex-col items-center justify-center rounded p-1 transition-transform active:scale-90">
-          <span className="material-symbols-outlined">history</span>
-          <span className="text-[12px] leading-[16px] font-medium">Orders</span>
-        </button>
-      </nav>
     </div>
   );
 }

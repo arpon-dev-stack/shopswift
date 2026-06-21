@@ -25,8 +25,8 @@ export default function ShopSwiftHome() {
   // Sticky header behavior on scroll
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f2f4f4] pb-20 font-sans text-[#191c1d] selection:bg-[#fe9800]/30">
-      <main className="mt-32">
+    <div className="mt-24 min-h-screen overflow-x-hidden bg-[#f2f4f4] pb-20 font-sans text-[#191c1d] selection:bg-[#fe9800]/30">
+      <main className="">
         {/* Hero Banner Section */}
         <section className="relative h-48 w-full overflow-hidden md:h-64">
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#f2f4f4] via-transparent to-transparent"></div>
@@ -196,7 +196,7 @@ export default function ShopSwiftHome() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="w-32 flex-shrink-0 rounded border border-[#D5D9D9] bg-white p-1"
+                className="w-32 flex-shrink-0 rounded border border-[#D5D9D9] bg-[#ffffff] p-1"
               >
                 <Image
                   fill
@@ -217,34 +217,6 @@ export default function ShopSwiftHome() {
           </div>
         </section>
       </main>
-
-      {/* BottomNavBar */}
-      <nav className="pb-safe fixed bottom-0 z-50 flex h-16 w-full items-center justify-around border-t border-[#c5c6cc] bg-[#f8fafa] px-2 shadow-lg dark:border-[#75777c] dark:bg-[#d8dada]">
-        <a
-          className="flex scale-95 flex-col items-center justify-center rounded-full bg-[#fe9800] px-4 py-1 text-xs font-medium text-[#643900] transition-transform active:scale-90 dark:bg-[#8a5100] dark:text-white"
-          href="#"
-        >
-          <span>Home</span>
-        </a>
-        <a
-          className="flex scale-95 flex-col items-center justify-center rounded-full px-3 py-1 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span>Profile</span>
-        </a>
-        <a
-          className="flex scale-95 flex-col items-center justify-center rounded-full px-3 py-1 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span>Cart</span>
-        </a>
-        <a
-          className="flex scale-95 flex-col items-center justify-center rounded-full px-3 py-1 text-xs font-medium text-[#44474c] transition-transform hover:bg-[#e6e8e8] active:scale-90 dark:text-[#191c1d] dark:hover:bg-[#e1e3e3]"
-          href="#"
-        >
-          <span>Orders</span>
-        </a>
-      </nav>
 
       {/* Floating Micro-interaction Toast */}
       <div
