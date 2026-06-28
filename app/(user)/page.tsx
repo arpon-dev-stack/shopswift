@@ -1,29 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-// Simulated Image component to match Next.js standard or custom components
-// Replace this with "import Image from 'next/image'" if using Next.js
+import ProductCard from '../component/ProductCard';
 
 export default function ShopSwiftHome() {
-  const [toastVisible, setToastVisible] = useState(false);
-
-  // Micro-interaction for Add to Cart toast
-  const handleAddToCart = () => {
-    setToastVisible(true);
-  };
-
-  useEffect(() => {
-    if (toastVisible) {
-      const timer = setTimeout(() => {
-        setToastVisible(false);
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [toastVisible]);
-
-  // Sticky header behavior on scroll
-
   return (
     <div className="mt-24 min-h-screen overflow-x-hidden bg-[#f2f4f4] pb-20 font-sans text-[#191c1d] selection:bg-[#fe9800]/30">
       <main className="">
@@ -61,10 +41,8 @@ export default function ShopSwiftHome() {
                 key={idx}
                 className="flex flex-shrink-0 cursor-pointer flex-col items-center gap-1"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#c5c6cc] bg-[#e6e8e8] text-[#0e1a28]">
-                  <span className="text-xs font-semibold">
-                    {cat.label.substring(0, 3)}
-                  </span>
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#c5c6cc] bg-[#e6e8e8] text-[#0e1a28]">
+                  <span className="text-xs font-semibold"></span>
                 </div>
                 <span className="text-xs font-medium text-gray-700">
                   {cat.label}
@@ -88,98 +66,11 @@ export default function ShopSwiftHome() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="flex gap-2">
             {/* Product Card 1 */}
-            <div className="flex flex-col justify-between rounded-lg border border-[#D5D9D9] bg-white p-2">
-              <div>
-                <div className="group relative mb-2 aspect-square w-full overflow-hidden">
-                  <Image
-                    fill
-                    className="h-full w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
-                    alt="Premium Wireless Headphones"
-                    src="/image.png"
-                  />
-                  <span className="absolute top-0 left-0 bg-[#fe9800] px-2 py-1 text-[11px] font-bold text-[#643900]">
-                    Limited Time Deal
-                  </span>
-                </div>
-                <h4 className="line-clamp-2 min-h-[40px] text-sm text-[#191c1d]">
-                  Premium Wireless Noise-Canceling Headphones
-                </h4>
-                <div className="mt-1 flex items-center gap-1">
-                  <div className="flex text-xs text-[#fe9800]">★★★★☆</div>
-                  <span className="text-[11px] text-[#4ca0b6]">2,483</span>
-                </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-lg font-bold text-[#191c1d]">
-                    $129.99
-                  </span>
-                  <span className="text-[11px] text-[#75777c] line-through">
-                    $299.99
-                  </span>
-                </div>
-                <div className="mt-1 flex items-center gap-1">
-                  <span className="text-sm font-extrabold text-blue-600 italic">
-                    prime
-                  </span>
-                  <span className="text-[11px] text-[#44474c]">
-                    FREE Delivery
-                  </span>
-                </div>
-              </div>
-              <button
-                onClick={handleAddToCart}
-                className="mt-4 w-full rounded-lg bg-[#fe9800] py-2 text-sm font-semibold text-[#0e1a28] transition-colors hover:bg-[#ffdcbd]"
-              >
-                Add to Cart
-              </button>
-            </div>
-
+            <ProductCard />
             {/* Product Card 2 */}
-            <div className="flex flex-col justify-between rounded-lg border border-[#D5D9D9] bg-white p-2">
-              <div>
-                <div className="group relative mb-2 aspect-square w-full overflow-hidden">
-                  <Image
-                    fill
-                    className="h-full w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
-                    alt="Minimalist Leather Strap Watch"
-                    src="/image.png"
-                  />
-                  <span className="absolute top-0 left-0 bg-[#fe9800] px-2 py-1 text-[11px] font-bold text-[#643900]">
-                    25% OFF
-                  </span>
-                </div>
-                <h4 className="line-clamp-2 min-h-[40px] text-sm text-[#191c1d]">
-                  Minimalist Leather Strap Designer Watch
-                </h4>
-                <div className="mt-1 flex items-center gap-1">
-                  <div className="flex text-xs text-[#fe9800]">★★★★★</div>
-                  <span className="text-[11px] text-[#4ca0b6]">892</span>
-                </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-lg font-bold text-[#191c1d]">
-                    $59.25
-                  </span>
-                  <span className="text-[11px] text-[#75777c] line-through">
-                    $79.00
-                  </span>
-                </div>
-                <div className="mt-1 flex items-center gap-1">
-                  <span className="text-sm font-extrabold text-blue-600 italic">
-                    prime
-                  </span>
-                  <span className="text-[11px] text-[#44474c]">
-                    FREE Delivery
-                  </span>
-                </div>
-              </div>
-              <button
-                onClick={handleAddToCart}
-                className="mt-4 w-full rounded-lg bg-[#fe9800] py-2 text-sm font-semibold text-[#0e1a28] transition-colors hover:bg-[#ffdcbd]"
-              >
-                Add to Cart
-              </button>
-            </div>
+            <ProductCard />
           </div>
         </section>
 
@@ -198,12 +89,12 @@ export default function ShopSwiftHome() {
                 key={idx}
                 className="w-32 flex-shrink-0 rounded border border-[#D5D9D9] bg-[#ffffff] p-1"
               >
-                <Image
+                {/* <Image
                   fill
                   className="mb-1 aspect-square w-full object-contain"
                   alt={item.alt}
                   src="/image.png"
-                />
+                /> */}
                 <p className="text-xs font-bold text-[#191c1d]">{item.price}</p>
               </div>
             ))}
@@ -219,16 +110,6 @@ export default function ShopSwiftHome() {
       </main>
 
       {/* Floating Micro-interaction Toast */}
-      <div
-        className={`fixed right-4 bottom-20 z-[60] flex items-center gap-2 rounded-xl bg-[#0e1a28] px-4 py-2 text-white shadow-xl transition-all duration-300 ${
-          toastVisible
-            ? 'translate-y-0 opacity-100'
-            : 'translate-y-24 opacity-0'
-        }`}
-      >
-        <span className="text-green-400">✓</span>
-        <span className="text-sm">Added to Cart</span>
-      </div>
     </div>
   );
 }
