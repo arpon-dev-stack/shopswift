@@ -63,77 +63,9 @@ export default function AddProductForm() {
   return (
     <div className="bg-surface text-on-surface min-h-screen font-sans antialiased">
       {/* TopAppBar */}
-      <header className="px-gutter bg-surface dark:bg-on-surface border-outline-variant dark:border-outline sticky top-0 z-50 flex h-14 w-full items-center justify-between border-b py-2">
-        <div className="flex cursor-pointer items-center gap-2 active:opacity-80">
-          <span className="material-symbols-outlined text-primary dark:text-primary-fixed-dim">
-            storefront
-          </span>
-          <h1 className="text-primary dark:text-primary-fixed-dim text-[18px] leading-[24px] font-bold tracking-tight">
-            Store Manager
-          </h1>
-        </div>
-        <div className="flex cursor-pointer items-center gap-2 active:opacity-80">
-          <div className="bg-primary-container text-on-primary-container relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
-            <Image
-              alt="Admin User Profile"
-              src="/image.png"
-              fill
-              sizes="32px"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </header>
 
       <div className="flex">
         {/* NavigationDrawer (Desktop Only) */}
-        <aside className="bg-surface-container dark:bg-surface-container-high border-outline-variant sticky top-14 hidden h-[calc(100vh-3.5rem)] w-64 flex-col gap-4 border-r py-6 md:flex">
-          <div className="mb-2 px-4">
-            <div className="flex items-center gap-3">
-              <div className="bg-secondary-fixed text-on-secondary-fixed flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
-                <span className="material-symbols-outlined">person</span>
-              </div>
-              <div className="overflow-hidden">
-                <p className="text-primary truncate text-[14px] leading-[20px] font-bold">
-                  Alex Admin
-                </p>
-                <p className="text-on-surface-variant text-[12px] leading-[16px] font-medium">
-                  Store Owner
-                </p>
-              </div>
-            </div>
-          </div>
-          <nav className="flex flex-col gap-1 px-2">
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">dashboard</span>
-              <span className="text-[14px] leading-[20px]">Dashboard</span>
-            </a>
-            <a
-              className="bg-secondary-container text-on-secondary-container mx-2 flex items-center gap-3 rounded-full px-4 py-3 font-bold transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">inventory_2</span>
-              <span className="text-[14px] leading-[20px]">Inventory</span>
-            </a>
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">shopping_cart</span>
-              <span className="text-[14px] leading-[20px]">Orders</span>
-            </a>
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">settings</span>
-              <span className="text-[14px] leading-[20px]">Settings</span>
-            </a>
-          </nav>
-        </aside>
 
         {/* Main Content Area */}
         <main className="mx-auto mb-20 flex-1 px-4 py-6 md:mb-0 md:max-w-4xl md:py-8">

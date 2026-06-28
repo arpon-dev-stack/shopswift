@@ -85,99 +85,9 @@ export default function InventoryManagement() {
   return (
     <div className="bg-background text-on-surface min-h-screen font-sans antialiased">
       {/* TopAppBar */}
-      <header className="bg-surface dark:bg-on-surface border-outline-variant dark:border-outline px-gutter sticky top-0 z-40 flex h-14 w-full items-center justify-between border-b py-2">
-        <div className="flex cursor-pointer items-center gap-2 active:opacity-80">
-          <span
-            className="material-symbols-outlined text-primary dark:text-primary-fixed-dim"
-            style={{ fontVariationSettings: "'opsz' 24" }}
-          >
-            storefront
-          </span>
-          <h1 className="text-primary dark:text-primary-fixed-dim text-[18px] leading-[24px] font-bold tracking-tight">
-            Store Manager
-          </h1>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="relative hidden sm:block">
-            <input
-              className="bg-surface-container-low border-outline-variant focus:ring-secondary-container w-64 rounded-lg border px-4 py-1.5 text-[14px] leading-[20px] transition-all outline-none focus:border-transparent focus:ring-2"
-              placeholder="Search inventory..."
-              type="text"
-            />
-            <span className="material-symbols-outlined text-on-surface-variant absolute top-2 right-3">
-              search
-            </span>
-          </div>
-          <div className="bg-primary-container text-on-primary-container relative flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full">
-            <Image
-              src="/image.png"
-              alt="Admin User Profile"
-              fill
-              sizes="32px"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </header>
 
       <div className="flex">
         {/* NavigationDrawer (Desktop Only) */}
-        <aside className="bg-surface-container-low border-outline-variant sticky top-14 hidden h-[calc(100vh-3.5rem)] w-64 flex-col gap-4 border-r py-6 md:flex">
-          <div className="mb-4 flex items-center gap-3 px-4">
-            <div className="bg-secondary-container relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full">
-              <Image
-                src="/image.png"
-                alt="Admin Avatar"
-                fill
-                sizes="40px"
-                className="object-cover"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <p className="text-on-surface truncate text-[14px] leading-[20px] font-bold">
-                Alex Admin
-              </p>
-              <p className="text-on-surface-variant text-[12px] leading-[16px] font-medium">
-                Store Owner
-              </p>
-            </div>
-          </div>
-          <nav className="flex flex-col gap-1">
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">dashboard</span>
-              <span className="text-[14px] leading-[20px]">Dashboard</span>
-            </a>
-            <a
-              className="bg-secondary-container text-on-secondary-container mx-2 flex items-center gap-3 rounded-full px-4 py-3 font-bold transition-all"
-              href="#"
-            >
-              <span
-                className="material-symbols-outlined"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                inventory_2
-              </span>
-              <span className="text-[14px] leading-[20px]">Inventory</span>
-            </a>
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">shopping_cart</span>
-              <span className="text-[14px] leading-[20px]">Orders</span>
-            </a>
-            <a
-              className="text-on-surface-variant hover:bg-surface-variant mx-2 flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-              href="#"
-            >
-              <span className="material-symbols-outlined">settings</span>
-              <span className="text-[14px] leading-[20px]">Settings</span>
-            </a>
-          </nav>
-        </aside>
 
         {/* Main Content Canvas */}
         <main className="min-h-[calc(100vh-3.5rem)] flex-1 p-4 pb-32 md:p-6">

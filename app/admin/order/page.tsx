@@ -109,87 +109,8 @@ export default function OrderManagement() {
   return (
     <div className="bg-background text-on-background min-h-screen font-sans antialiased">
       {/* Sidebar (Desktop Only) */}
-      <aside className="bg-surface-container border-outline-variant fixed top-0 left-0 z-50 hidden h-screen w-64 flex-col gap-4 border-r py-6 md:flex">
-        <div className="mb-2 flex items-center gap-3 px-4">
-          <span className="material-symbols-outlined text-primary text-[24px]">
-            storefront
-          </span>
-          <h1 className="text-primary text-[18px] leading-[24px] font-bold tracking-tight">
-            Store Manager
-          </h1>
-        </div>
-        <div className="mb-2 flex flex-col gap-1 px-4">
-          <div className="bg-surface-container-low border-outline-variant/50 flex items-center gap-3 rounded-xl border p-3">
-            <div className="border-outline-variant relative h-10 w-10 shrink-0 overflow-hidden rounded-full border">
-              <Image
-                alt="Admin Avatar"
-                src="/image.png"
-                fill
-                sizes="40px"
-                className="object-cover"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <p className="text-on-surface truncate text-[14px] leading-[20px] font-bold">
-                Alex Admin
-              </p>
-              <p className="text-on-surface-variant text-[12px] leading-[16px] font-medium">
-                Store Owner
-              </p>
-            </div>
-          </div>
-        </div>
-        <nav className="flex flex-col gap-1 px-2">
-          <a
-            className="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="text-[14px] leading-[20px]">Dashboard</span>
-          </a>
-          <a
-            className="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">inventory_2</span>
-            <span className="text-[14px] leading-[20px]">Inventory</span>
-          </a>
-          <a
-            className="bg-secondary-container text-on-secondary-container flex items-center gap-3 rounded-full px-4 py-3 font-bold transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">shopping_cart</span>
-            <span className="text-[14px] leading-[20px]">Orders</span>
-          </a>
-          <a
-            className="text-on-surface-variant hover:bg-surface-variant flex items-center gap-3 rounded-full px-4 py-3 transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">settings</span>
-            <span className="text-[14px] leading-[20px]">Settings</span>
-          </a>
-        </nav>
-      </aside>
 
       {/* Top App Bar */}
-      <header className="bg-surface border-outline-variant sticky top-0 z-40 flex h-14 items-center justify-between border-b px-4 md:pl-72">
-        <div className="flex items-center gap-3">
-          <span className="material-symbols-outlined text-primary text-[24px] md:hidden">
-            storefront
-          </span>
-          <h2 className="text-primary text-[18px] leading-[24px] font-bold">
-            Orders
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="hover:bg-surface-container-low text-on-surface-variant flex items-center justify-center rounded-full p-2 transition-colors">
-            <span className="material-symbols-outlined">notifications</span>
-          </button>
-          <div className="bg-primary-container text-on-primary-container flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-bold tracking-wider">
-            AU
-          </div>
-        </div>
-      </header>
 
       {/* Main Content Canvas */}
       <main className="min-h-[calc(100vh-3.5rem)] p-4 pb-24 md:ml-64 md:p-6 md:pb-6">
