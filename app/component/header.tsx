@@ -1,37 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import Cart from './cart';
 import NavigationLinks from './NavLinks';
+import Profile from './Profile';
 
 const Header = () => {
-  const [headerVisible, setHeaderVisible] = useState(true);
-
-  useEffect(() => {
-    let lastScroll = 0;
-    const handleScroll = () => {
-      const currentScroll = window.scrollY; // Modern standard instead of pageYOffset
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        setHeaderVisible(false);
-      } else {
-        setHeaderVisible(true);
-      }
-      lastScroll = currentScroll;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
       {/* Main Top Header */}
       <header
-        className={`pt-safe fixed top-0 left-0 z-50 flex w-full flex-col bg-[#0e1a28] shadow-sm transition-transform duration-300 dark:bg-[#232f3e] ${
-          headerVisible ? 'translate-y-0' : '-translate-y-12'
-        }`}
+        className={`z-50 flex w-full flex-col bg-[#0e1a28] px-3 shadow-sm transition-transform duration-300 dark:bg-[#232f3e]`}
       >
-        <div className="flex h-14 w-full items-center px-5">
+        <div className="flex h-14 w-full items-center">
           <div className="flex items-center gap-2">
             <h1 className="text-xl font-bold tracking-tight text-white dark:text-[#8a97a9]">
               ShopSwift
@@ -45,7 +25,9 @@ const Header = () => {
         </div>
 
         {/* Integrated Search Bar */}
-        <div className="flex items-center gap-5 px-5 pb-2">
+        <div
+          className={`flex w-full items-center gap-5 bg-[#0e1a28] pb-2 transition-all`}
+        >
           <div className="relative w-full">
             <input
               className="h-10 w-full rounded-lg border-none bg-white pr-10 pl-10 text-sm ring-1 ring-[#c5c6cc] transition-all focus:ring-2 focus:ring-[#fe9800] focus:outline-none"
@@ -69,16 +51,10 @@ const Header = () => {
               </svg>
             </div>
           </div>
+          <Profile />
           <Cart />
         </div>
       </header>
-
-      {/* Mobile Navigation Menu - Moved outside the transformed header */}
-      <div className="sm:hidden">
-        <nav className="pb-safe fixed bottom-0 left-0 z-50 flex h-16 w-full items-center justify-around border-t border-[#c5c6cc] bg-[#f8fafa] px-2 shadow-lg dark:border-[#75777c] dark:bg-[#d8dada]">
-          <NavigationLinks />
-        </nav>
-      </div>
     </>
   );
 };
