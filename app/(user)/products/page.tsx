@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import ProductCard from '@/app/component/ProductCard';
 
 interface Product {
   id: number;
@@ -78,11 +79,10 @@ export default function SearchResults() {
   ]);
 
   return (
-    <div className="text-on-surface bg-surface min-h-screen font-sans antialiased">
-      <main className="mt-14 pb-20">
-        {/* Filter & Sort Bar */}
-        <div className="bg-surface border-outline-variant px-gutter hide-scrollbar sticky top-14 z-40 overflow-x-auto border-b py-2 whitespace-nowrap shadow-sm">
-          <div className="flex items-center gap-4">
+    <main className="pb-20">
+      {/* Filter & Sort Bar */}
+      {/* <div className="bg-surface px-3 border-outline-variant px-gutter hide-scrollbar sticky top-0 z-40 overflow-x-auto border-b py-2 whitespace-nowrap shadow-sm bg-[#0e1a28]">
+          <div className="flex items-center text-white gap-4">
             {['Sort: Featured', 'Price', 'Brand', 'Customer Review'].map(
               (filter, index) => (
                 <div
@@ -99,112 +99,29 @@ export default function SearchResults() {
               )
             )}
           </div>
-        </div>
+        </div> */}
 
-        {/* Search Info */}
-        <div className="px-gutter text-on-surface-variant py-2">
-          <p className="text-[14px] leading-[20px]">
-            1-48 of over 10,000 results for{' '}
-            <span className="text-secondary font-bold">
-              &quot;noise cancelling headphones&quot;
-            </span>
-          </p>
-        </div>
+      {/* Search Info */}
+      <div className="text-on-surface-variant px-3 py-2">
+        <p className="text-[14px] leading-[20px]">
+          1-48 of over 10,000 results for{' '}
+          <span className="text-secondary font-bold">
+            &quot;noise cancelling headphones&quot;
+          </span>
+        </p>
+      </div>
 
-        {/* Product List */}
-        <div className="flex flex-col">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="product-card bg-surface-container-lowest p-gutter mb-2 flex cursor-pointer gap-4 border border-[#D5D9D9] transition-all first:mt-0 last:mb-0 hover:shadow-md"
-            >
-              {/* Product Image Wrap with requested structure */}
-              <div className="relative flex h-32 w-32 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white">
-                <Image
-                  fill
-                  src={product.imgSrc}
-                  alt={product.alt}
-                  className="object-contain"
-                  sizes="(max-width: 768px) 128px, 128px"
-                />
-                {product.isBestseller && (
-                  <div className="bg-secondary-container text-on-secondary-container absolute top-0 left-0 z-10 rounded-br-lg px-2 py-0.5 text-[11px] leading-[14px] font-semibold">
-                    Bestseller
-                  </div>
-                )}
-              </div>
-
-              {/* Product Details */}
-              <div className="flex flex-grow flex-col gap-0.5">
-                <h3 className="text-on-surface line-clamp-2 text-[16px] leading-[24px] font-normal">
-                  {product.title}
-                </h3>
-
-                {/* Product Rating System */}
-                <div className="flex items-center gap-1">
-                  <div className="text-secondary-container flex">
-                    {[...Array(5)].map((_, i) => {
-                      const starVal = i + 1;
-                      const isHalf =
-                        product.rating % 1 !== 0 &&
-                        starVal === Math.ceil(product.rating);
-                      const isFilled = starVal <= product.rating;
-
-                      return (
-                        <span
-                          key={i}
-                          className="material-symbols-outlined text-[18px]"
-                          style={{
-                            fontVariationSettings: `'FILL' ${isFilled && !isHalf ? 1 : 0}`,
-                          }}
-                        >
-                          {isHalf ? 'star_half' : 'star'}
-                        </span>
-                      );
-                    })}
-                  </div>
-                  <span className="text-on-tertiary-container text-[12px] leading-[16px] font-medium">
-                    {product.reviews}
-                  </span>
-                </div>
-
-                {/* Pricing Framework */}
-                <div className="mt-1 flex items-baseline gap-1">
-                  <span className="text-on-surface text-[28px] leading-[28px] font-bold tracking-tight">
-                    <sup className="top-[-0.6em] text-[14px]">$</sup>
-                    {product.priceDollar}
-                    <sup className="top-[-0.6em] text-[14px]">
-                      {product.priceCents}
-                    </sup>
-                  </span>
-                  {product.originalPrice && (
-                    <span className="text-on-surface-variant text-[12px] leading-[16px] line-through">
-                      ${product.originalPrice}
-                    </span>
-                  )}
-                </div>
-
-                {/* Delivery Context */}
-                <div className="mt-1 flex items-center gap-1">
-                  {product.hasPrime && (
-                    <span className="text-on-tertiary-container mr-0.5 text-[12px] leading-[16px] font-bold">
-                      Prime
-                    </span>
-                  )}
-                  <span className="text-on-surface-variant text-[12px] leading-[16px]">
-                    FREE delivery{' '}
-                    <span className="font-bold">{product.deliveryDay}</span>
-                  </span>
-                </div>
-
-                <button className="bg-secondary-container hover:bg-secondary text-on-secondary-container mt-2 w-fit transform rounded-full px-4 py-1.5 text-[12px] leading-[16px] font-bold transition-colors active:scale-95">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </main>
-    </div>
+      {/* Product List */}
+      <div className="grid grid-flow-row grid-cols-2 gap-3 px-3 sm:grid-cols-4 xl:grid-cols-5">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+    </main>
   );
 }

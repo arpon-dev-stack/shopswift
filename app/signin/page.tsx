@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import EyeOpen from '../component/icons/EyeOpen';
+import EyeClose from '../component/icons/EyeClose';
+import GoogleIcon from '../component/icons/GoogleIcon';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -32,16 +35,12 @@ export default function SignIn() {
       <header className="bg-background fixed top-0 z-50 w-full">
         <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => window.history.back()}
-              className="material-symbols-outlined text-primary hover:bg-surface-container flex cursor-pointer items-center justify-center rounded-full p-1 transition-transform active:scale-95"
+            <Link
+              href="/"
+              className="text-primary text-[20px] leading-[28px] font-bold select-none"
             >
-              arrow_back
-            </button>
-            <span className="text-primary text-[20px] leading-[28px] font-bold select-none">
               ShopSwift
-            </span>
+            </Link>
           </div>
           <div className="hidden items-center gap-4 md:flex">
             <Link
@@ -126,7 +125,7 @@ export default function SignIn() {
                     }
                   >
                     <span className="material-symbols-outlined">
-                      {showPassword ? 'visibility_off' : 'visibility'}
+                      {showPassword ? <EyeOpen /> : <EyeClose />}
                     </span>
                   </button>
                 </div>
@@ -198,13 +197,7 @@ export default function SignIn() {
                 type="button"
                 className="border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container-low flex w-full items-center justify-center gap-2 rounded-lg border py-2.5 text-[12px] leading-[16px] font-medium transition-colors active:scale-[0.98]"
               >
-                <Image
-                  alt="Google"
-                  className="h-4 w-4"
-                  src="/image.png"
-                  width={40}
-                  height={40}
-                />
+                <GoogleIcon />
                 <span>Sign In with Google</span>
               </button>
               <button

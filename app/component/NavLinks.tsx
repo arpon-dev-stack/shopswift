@@ -7,11 +7,11 @@ const NavigationLinks = () => {
   const pathname = usePathname();
   const navLinks: { name: string; address: string; id: number }[] = [
     { name: 'home', address: '/', id: 0 },
-    { name: 'profile', address: '/user', id: 1 },
+    { name: 'products', address: '/products', id: 1 },
     { name: 'order', address: '/order', id: 2 },
   ];
   return (
-    <>
+    <nav className="flex">
       {navLinks.map((navLink) => (
         <Link
           key={navLink.id}
@@ -21,7 +21,7 @@ const NavigationLinks = () => {
           <span className="capitalize">{navLink.name}</span>
         </Link>
       ))}
-    </>
+    </nav>
   );
 };
 

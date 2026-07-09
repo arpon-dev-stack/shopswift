@@ -7,11 +7,11 @@ const ProductCard = () => {
         <div className="group relative mb-2 aspect-square w-full overflow-hidden">
           <Image
             fill
-            className="h-full w-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full rounded-sm object-cover mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
             alt="Premium Wireless Headphones"
             src="/image.png"
           />
-          <span className="absolute top-0 left-0 bg-[#fe9800] px-2 py-1 text-[11px] font-bold text-[#643900]">
+          <span className="absolute top-0 left-0 rounded-sm bg-[#fe9800] px-2 py-1 text-[11px] font-bold text-[#643900]">
             Limited Time Deal
           </span>
         </div>
